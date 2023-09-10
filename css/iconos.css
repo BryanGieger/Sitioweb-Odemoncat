@@ -1,0 +1,174 @@
+@font-face {
+  font-family: 'ocatart';
+  src:  url('../fonts/iconos-ocatart/Ocatart.eot');
+  src:  url('../fonts/iconos-ocatart/Ocatart.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/iconos-ocatart/Ocatart.ttf') format('truetype'),
+    url('../fonts/iconos-ocatart/Oacatart.woff') format('woff'),
+    url('../fonts/iconos-ocatart/Oacatart.svg#ocatart') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'ocatart'!important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ocatart-icons {
+  font-family: 'ocatart'!important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+.ocatart-icons.logo::before {
+    content: '\e926';
+}
+.ocatart-icons.paw::before {
+    content: '\e931';
+}
+.ocatart-icons.paw-alter::before {
+    content: '\e930';
+}
+.ocatart-icons.info::before {
+    content: '\e91e';
+}
+.ocatart-icons.info-alter::before {
+    content: '\e91f';
+}
+.ocatart-icons.info-alter2::before {
+    content: '\e920';
+}
+.ocatart-icons.info-alter3::before {
+    content: '\e921';
+}
+.ocatart-icons.quest::before {
+    content: '\e908';
+}
+.ocatart-icons.quest-alter::before {
+    content: '\e904';
+}
+.ocatart-icons.ok::before {
+    content: '\e909';
+    color: #4CAF50;
+}
+.ocatart-icons.not-ok::before {
+    content: '\e929';
+    color: #F44336;
+}
+.ocatart-icons.warning::before {
+    content: '\e93a';
+}
+.ocatart-icons.close::before {
+    content: '\e93b';
+}
+.ocatart-icons.close-alter::before {
+    content: '\e93d';
+}
+.ocatart-icons.cart::before {
+    content: '\e90c';
+}
+.ocatart-icons.cart-alter::before {
+    content: '\e90b';
+}
+.ocatart-icons.search::before {
+    content: '\e927';
+}
+.ocatart-icons.search-alter::before {
+    content: '\e928';
+}
+.ocatart-icons.new::before {
+    content: '\e92b';
+}
+.ocatart-icons.user::before {
+    content: '\e938';
+}
+.ocatart-icons.user-alter::before {
+    content: '\e939';
+}
+.ocatart-icons.lock::before {
+    content: '\e911';
+}
+.ocatart-icons.lock-alter::before {
+    content: '\e912';
+}
+.ocatart-icons.unlock::before {
+    content: '\e92d';
+}
+.ocatart-icons.unlock-alter::before {
+    content: '\e92e';
+}
+.ocatart-icons.config::before {
+    content: '\e917';
+}
+.ocatart-icons.email::before {
+    content: '\e914';
+}
+.ocatart-icons.email-alter::before {
+    content: '\e913';
+}
+.ocatart-icons.email-new::before {
+    content: '\e90f';
+}
+.ocatart-icons.cel::before {
+    content: '\e910';
+}
+.ocatart-icons.discord::before {
+    content: '\e915';
+}
+.ocatart-icons.discord2::before {
+    content: '\e916';
+}
+.ocatart-icons.facebook::before {
+    content: '\e91b';
+}
+.ocatart-icons.facebook2::before {
+    content: '\e91c';
+}
+.ocatart-icons.instagram::before {
+    content: '\e924';
+}
+.ocatart-icons.instagram2::before {
+    content: '\e925';
+}
+.ocatart-icons.telegram::before {
+    content: '\e933';
+}
+.ocatart-icons.telegram2::before {
+    content: '\e934';
+}
+.ocatart-icons.twitter::before {
+    content: '\e936';
+}
+.ocatart-icons.twitter2::before {
+    content: '\e937';
+}
+.ocatart-icons.box::before {
+    content: '\e90a';
+}
+.ocatart-icons.lang::before {
+    content: '\e900';
+}
+
+.social .ocatart-icons {
+  text-align: center!important;
+  font-size: 36px!important;
+  line-height: 43px!important;
+  margin-left: 2px!important;
+}

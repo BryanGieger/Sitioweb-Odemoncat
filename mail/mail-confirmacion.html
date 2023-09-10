@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+  <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn"t be necessary -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+  <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+  <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no"> <!-- Tell iOS not to automatically link certain text strings. -->
+  <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+  <!-- Web Font / @font-face : BEGIN -->
+  <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+
+  <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+  <!--[if mso]>
+  <style>
+  * {
+  font-family: sans-serif !important;
+}
+</style>
+<![endif]-->
+
+<!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+<!--[if !mso]><!-->
+<!-- insert web font reference, eg: <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet" type="text/css"> -->
+<!--<![endif]-->
+
+<!-- Web Font / @font-face : END -->
+
+<!-- CSS Reset : BEGIN -->
+<style>
+
+/* What it does: Remove spaces around the email design added by some email clients. */
+/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* What it does: Stops email clients resizing small text. */
+* {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* What it does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+  margin: 0 !important;
+}
+
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table,
+td {
+  mso-table-lspace: 0pt !important;
+  mso-table-rspace: 0pt !important;
+}
+
+/* What it does: Fixes webkit padding issue. */
+table {
+  border-spacing: 0 !important;
+  border-collapse: collapse !important;
+  table-layout: fixed !important;
+  margin: 0 auto !important;
+}
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+  -ms-interpolation-mode:bicubic;
+}
+
+/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+a {
+  text-decoration: none;
+}
+
+/* What it does: A work-around for email clients meddling in triggered links. */
+a[x-apple-data-detectors],  /* iOS */
+.unstyle-auto-detected-links a,
+.aBn {
+  border-bottom: 0 !important;
+  cursor: default !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+.im {
+  color: inherit !important;
+}
+
+/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+.a6S {
+  display: none !important;
+  opacity: 0.01 !important;
+}
+/* If the above doesn"t work, add a .g-img class to any image in question. */
+img.g-img + div {
+  display: none !important;
+}
+
+/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+/* Create one of these media queries for each additional viewport size you"d like to fix */
+
+/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+  u ~ div .email-container {
+    min-width: 320px !important;
+  }
+}
+/* iPhone 6, 6S, 7, 8, and X */
+@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+  u ~ div .email-container {
+    min-width: 375px !important;
+  }
+}
+/* iPhone 6+, 7+, and 8+ */
+@media only screen and (min-device-width: 414px) {
+  u ~ div .email-container {
+    min-width: 414px !important;
+  }
+}
+
+</style>
+
+<!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+<!--[if gte mso 9]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+
+<!-- CSS Reset : END -->
+
+<!-- Progressive Enhancements : BEGIN -->
+<style>
+
+/* What it does: Hover styles for buttons */
+.button-td,
+.button-a {
+  transition: all 100ms ease-in;
+}
+.button-td-primary:hover,
+.button-a-primary:hover {
+  background: #CEA852 !important;
+}
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+
+  /* What it does: Forces table cells into full-width rows. */
+  .stack-column,
+  .stack-column-center {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    direction: ltr !important;
+  }
+  /* And center justify these ones. */
+  .stack-column-center {
+    text-align: center !important;
+  }
+
+  /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+  .center-on-narrow {
+    text-align: center !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+  }
+  table.center-on-narrow {
+    display: inline-block !important;
+  }
+
+  /* What it does: Adjust typography on small screens to improve readability */
+  .email-container p {
+    font-size: 17px !important;
+  }
+
+  .social {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  .social-space.start {
+    width: 10% !important;
+  }
+  .social-space.end {
+    width: 0 !important;
+  }
+
+  .header {
+    height: 184px !important;
+  }
+
+  .mcnTextContent hr {
+    width: 100% !important;
+  }
+
+  .imgbox {
+    width: 40% !important;
+  }
+}
+
+</style>
+<!-- Progressive Enhancements : END -->
+
+</head>
+<!--
+The email background color (#222222) is defined in three places:
+1. body tag: for most email clients
+2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+3. mso conditional: For Windows 10 Mail
+-->
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #36393F;">
+  <center style="width: 100%; background-color: #36393F;">
+    <!--[if mso | IE]>
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #36393F;">
+    <tr>
+    <td>
+    <![endif]-->
+
+    <!-- Visually Hidden Preheader Text : BEGIN -->
+    <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+      Cotizacion de Ocatart: #00001. Resumen de su cotizacion y un link para la confirmación o cancelación de esta.
+    </div>
+    <!-- Visually Hidden Preheader Text : END -->
+
+    <!-- Create white space after the desired preview text so email clients don’t pull other distracting text into the inbox preview. Extend as necessary. -->
+    <!-- Preview Text Spacing Hack : BEGIN -->
+    <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+      &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+    <!-- Preview Text Spacing Hack : END -->
+
+    <!--
+    Set the email width. Defined in two places:
+    1. max-width for all clients except Desktop Windows Outlook, allowing the email to squish on narrow but never go wider than 680px.
+    2. MSO tags for Desktop Windows Outlook enforce a 680px width.
+    Note: The Fluid and Responsive templates have a different width (600px). The hybrid grid is more "fragile", and I"ve found that 680px is a good width. Change with caution.
+  -->
+  <div style="max-width: 680px; margin: 0 auto;" class="email-container">
+    <!--[if mso]>
+    <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="680">
+    <tr>
+    <td>
+    <![endif]-->
+
+    <!-- Email Body : BEGIN -->
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+      <!-- Email Header : BEGIN -->
+      <tr>
+        <td style="text-align: center; background-image: url('https://www.ocatart.com/img/fondo.png'); background-color: #222222; background-position: center center !important; background-size: cover !important; width: 100%; max-width: 680px;">
+          <!--[if gte mso 9]>
+          <v:image xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0; display: inline-block; width: 680px; height: 180px;" src="https://www.ocatart.com/img/fondo.png" />
+          <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="border: 0; display: inline-block; position: absolute; width: 680px; height: 180px;">
+          <v:fill opacity="0%" color="#222222" />
+          <![endif]-->
+          <div>
+            <!--[if mso]>
+            <table align="center" role="presentation" border="0" cellspacing="0" cellpadding="0" width="500">
+            <tr>
+            <td width="500">
+            <![endif]-->
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td>
+                  <div class="header" style="text-align: center; background-image: url('https://www.ocatart.com/mail/logo.png'); background-color: rgba(22, 22, 22, 0.5); background-position: center center !important; background-size: 219px 104px !important; background-repeat: no-repeat; width: 100%; height: 300px;"></div>
+                </td>
+              </tr>
+            </table>
+            <!--[if mso]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+    </div>
+    <!--[if gte mso 9]>
+  </v:fill>
+</v:rect>
+</v:image>
+<![endif]-->
+</td>
+</tr>
+<!-- Email Header : END -->
+
+<!-- 1 Column Text : BEGIN -->
+<tr>
+  <td style="background-color: #2f3136;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #999;">
+          <h1 style="margin: 0 0 10px; font-size: 25px; line-height: 30px; color: rgba(255, 255, 255, 0.3); font-weight: normal;">Cotización de comision</h1>
+          <p style="margin: 0 0 10px;">¡Hola! Nombre. <br>
+            Le informo que tengo la cotización para su pedido, le entrego un resumen de este y agrego un link con el cual podra acceder a una pagina en la que nos informara si desea realizar la compra o no de su pedido.
+          </p>
+          <h2 style="margin: 0 0 10px; font-size: 20px; line-height: 30px; color: rgba(255, 255, 255, 0.3); font-weight: normal;">Resumen del pedido:</h2>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- 1 Column Text : END -->
+
+<!-- Product resume : START -->
+<tr>
+  <td style="background-color: #2f3136; padding: 0 30px;">
+    <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%;min-width:100%;" width="100%" class="mcnTextContentContainer">
+      <tbody>
+        <tr style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #999;">
+          <td width="70%">
+            <div style="text-align:left;">
+              <span>
+                Titulo del pedido mas el tamaño 20cm x 20cm
+              </span>
+            </div>
+          </td>
+          <td width="30%">
+            <div style="text-align:right;">
+              <span>
+                $1,000<span style="font-size: 10px">.00</span> MXN
+              </span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<!-- Product resume : END -->
+
+<!-- Horizontal line : BEGIN -->
+<tr>
+    <td aria-hidden="true" height="40" style="font-size: 0px; line-height: 0px; background-color: #2f3136; padding: 0 20px;">
+        <hr>
+    </td>
+</tr>
+<!-- Horizontal line : END -->
+
+<!-- Prices resume : BEGIN -->
+<tr>
+  <td valign="top" class="mcnTextContent" style="padding:10px 18px 0px; font-family: sans-serif; font-size:15px; line-height:100%; background-color: #2f3136; color: #999;">
+
+    <div style="float:right; width: 65%;text-align: right;">
+
+      <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%;min-width:100%;" width="100%" class="mcnTextContentContainer">
+        <tbody>
+          <tr>
+            <td class="imgbox" width="20%" style="padding: 5px 10px;">
+              <span>
+                Subtotal
+              </span>
+            </td>
+            <td class="imgbox" width="20%" style="padding: 5px 10px;">
+              <span>
+                $1,000<span style="font-size: 10px">.00</span> MXN
+              </span>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td class="imgbox" width="20%" style="padding: 5px 10px;">
+              <span>
+                Descuento
+              </span>
+            </td>
+            <td class="imgbox" width="20%" style="padding: 5px 10px;">
+              <span>
+                -$100<span style="font-size: 10px">.00</span> MXN
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" valign="top" class="mcnTextContent" style="font-size:24px;line-height:100%;padding: 0px!important;">
+
+              <div style="text-align:center;"><hr style="width: 80%;float: right;    border: 0px;    border-top: 1px solid #999;"></div>
+
+            </td>
+          </tr>
+
+
+          <tr>
+            <td class="imgbox" width="20%" style="padding: 5px 10px;">
+              <span>
+                Total
+              </span>
+            </td>
+            <td class="imgbox" width="20%" style="padding: 5px 10px;">
+              <span>
+                $900<span style="font-size: 10px">.00</span> MXN
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </td>
+</tr>
+<!-- Prices resume : END -->
+
+<!-- 1 Column Text + Button : BEGIN -->
+<tr>
+  <td style="background-color: #2f3136;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+      <tr>
+        <td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #999;">
+          <p style="margin: 0 0 10px;">
+            Si desea información mas completa, confirmar su pedido o cancelarlo por favor haga click en el botón. Si no funciona haga click en el link debajo de este.
+          </p>
+          <p style="margin: 0 0 10px;">
+            <b>AVISO:</b> Tiene un limite de 96 horas para confirmar o cancelar su pedido, luego de ese periodo su comision sera borrada automaticamente.
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 0 20px 20px;">
+          <!-- Button : BEGIN -->
+          <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+            <tr>
+              <td class="button-td button-td-primary" style="border-radius: 4px; background: #cd8f00;">
+                <a class="button-a button-a-primary" href="https://google.com/" style="background: #cd8f00; font-family: sans-serif; font-size: 14px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 4px;">INGRESAR A LA WEB</a>
+              </td>
+            </tr>
+          </table>
+          <!-- Button : END -->
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 0 20px 20px;">
+          <!-- Button : BEGIN -->
+          <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
+            <tr>
+              <td style="font-family: sans-serif; font-size: 12px;">
+                <a href="https://www.ocatart.com/confirmacion?num=00001" style="color: #999; line-height: 15px; text-decoration: underline; padding: 13px 17px; display: block;">https://www.ocatart.com/confirmacion?num=00001</a>
+              </td>
+            </tr>
+          </table>
+          <!-- Button : END -->
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<!-- 1 Column Text + Button : END -->
+
+</table>
+<!-- Email Body : END -->
+
+<!-- Email Footer : BEGIN -->
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width: 680px;">
+  <tr>
+    <td style="padding: 20px; font-family: sans-serif; font-size: 12px; text-align: center; color: #888888;">
+      <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="80%" class="social" style="margin 0 auto;">
+        <tr>
+          <td style="padding: 20px 0 28px 0;mso-padding-alt: 20px 0 28px 0;">
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tr>
+                <th align="center" style="vertical-align: center; padding:0;mso-padding-alt:0;display:block;width:100%;" >
+                  <table width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td class="social-space start" style="width:28%"></td>
+                      <td style="width:36px; height:auto; margin: 0 auto;">
+                        <a style=" text-decoration:none;" href="https://t.news.ubisoft.com/r/?id=hdfd5d684,905b3067,908881dd" target="_blank"><img src="https://www.ocatart.com/mail/dis.png" style="vertical-align:top; width: 36px; margin: 0 auto;" alt="UbiClub" width="36px" />
+                        </a>
+                      </td>
+                      <td style="width:36px; height:auto;">
+                        <a href="https://t.news.ubisoft.com/r/?id=hdfd5d684,905b3067,908881de" target="_blank" style=" text-decoration:none;"><img src="https://www.ocatart.com/mail/tel.png" style="vertical-align:top; width: 36px; margin: 0 auto;" alt="Twitter" width="36px" />
+                        </a>
+                      </td>
+                      <td style="width:36px; height:auto; margin: 0 auto;">
+                        <a href="https://t.news.ubisoft.com/r/?id=hdfd5d684,905b3067,908881df" target="_blank" style=" text-decoration:none;"><img src="https://www.ocatart.com/mail/fa.png" style="vertical-align:top; width: 36px; margin: 0 auto;" alt="Facebook" width="36px" />
+                        </a>
+                      </td>
+                      <td style="width:36px; height:auto; margin: 0 auto;">
+                        <a href="https://t.news.ubisoft.com/r/?id=hdfd5d684,905b3067,908881e0" target="_blank" style="text-decoration:none;"><img src="https://www.ocatart.com/mail/tui.png" style="vertical-align:top; width: 36px; margin: 0 auto;" alt="Instagram" width="36px" />
+                        </a>
+                      </td>
+                      <td class="social-space end" style="width:20%"></td>
+                    </tr>
+                  </table>
+                </th>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <a href="https://www.ocatart.com" style="color: #888888; text-decoration: underline;">Copyright © www.ocatart.com 2019</a><br><br><span class="unstyle-auto-detected-links">Este es un mensaje automático de información al haber hecho una comision en ocatart.com si cree que se trata de un error ignore este correo.<br><br>No responda este mensaje automático ya que no recibimos correos por esta dirección de correo, para eso envié su mail a esta dirección de correo:</span>
+      <br>
+      <a href="mailto:mail@ocatart.com" style="color: #888888; text-decoration: underline;">mail@ocatart.com</a>
+    </td>
+  </tr>
+</table>
+<!-- Email Footer : END -->
+
+<!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</div>
+
+<!--[if mso | IE]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</center>
+</body>
+</html>

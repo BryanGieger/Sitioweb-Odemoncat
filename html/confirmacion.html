@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Portafolio</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <link href="../css/gallery-dark-materialize.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../css/ocatart.css" rel="stylesheet">
+  <link href="../css/animate.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/iconos.css">
+  <link rel="stylesheet" href="../css/sidebar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css">
+</head>
+
+<body class="background-disc" id="home">
+  <nav class="nav-extended nav-comisiones z-depth-0">
+    <div class="nav-wrapper container">
+      <a href="inicio" class="brand-logo"><img class="responsive-img nav-logo mini" src="../img/logo.png"></a>
+      <a href="#" data-activates="nav-mobile" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="inicio">Inicio</a>
+        </li>
+        <li>
+          <a href="portafolio">Portafolio</a>
+        </li>
+        <li>
+          <a href="comisiones">Comisiones</a>
+        </li>
+        <li>
+          <a href="docs.html">Servicios</a>
+        </li>
+        <li>
+          <a href="https://tienda.ocatart.com">Tienda</a>
+        </li>
+      </ul>
+    </div>
+
+
+  </nav>
+  <ul class="side-nav" id="nav-mobile">
+    <li>
+      <a href="index.html">
+        <i class="material-icons">camera</i>Inicio</a>
+    </li>
+    <li class="active">
+      <a href="index-dark.html">
+        <i class="material-icons">brightness_3</i>Portafolio</a>
+    </li>
+    <li>
+      <a href="blog.html">
+        <i class="material-icons">edit</i>Comisiones</a>
+    </li>
+    <li>
+      <a href="docs.html">
+        <i class="material-icons">school</i>Servicios</a>
+    </li>
+    <li>
+      <a href="full-header.html">
+        <i class="material-icons">fullscreen</i>Tienda</a>
+    </li>
+  </ul>
+
+
+  <!-- Gallery -->
+  <div id="confirmacion" class="section gray confirmacion content-comisiones text-comisiones">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m6 l6 center-div">
+          <h3 style="margin-bottom:34px;">Resumen de tu pedido</h3>
+          <div class="resumen">
+            <div class="row">
+              <div class="col s12 m8">
+                <b>Nombre:</b> Fulanito De Tal xdxdxdxxd.
+              </div>
+              <div class="col s12 m8">
+                <b>Nick:</b> @Fulano.
+              </div>
+              <div class="col s12 m8">
+                <b>Tipo de comision:</b> Figura 3D.
+              </div>
+              <hr class="col s12 fact">
+            </div>
+            <div class="row">
+              <div class="col s8">
+                <div class="title-comision">
+                  Polypropylene Build Plate for Ender 15cm x 15cm
+                </div>
+              </div>
+              <div class="col s4">
+                <div class="precio">
+                  $16.000<span>.00</span> MXN
+                </div>
+              </div>
+              <hr class="col s12 fact">
+            </div>
+            <div class="row">
+              <div class="col s8">
+                <div class="precio-title">
+                  Subtotal
+                </div>
+              </div>
+              <div class="col s4 right">
+                <div class="precio">
+                  $16,000<span>.00</span> MXN
+                </div>
+              </div>
+              <div class="col s8">
+                <div class="precio-title">
+                  Descuento
+                </div>
+              </div>
+              <div class="col s4 right">
+                <div class="precio">
+                  -$100<span>.00</span> MXN
+                </div>
+              </div>
+              <hr class="col s6 fact right">
+            </div>
+            <div class="row">
+              <div class="col s8">
+                <div class="precio-total">
+                  Total
+                </div>
+              </div>
+              <div class="col s4 right">
+                <div class="total">
+                  $15.900<span>.00</span> MXN
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6 l6 center-form">
+          <h3>Completar tu pedido</h3>
+          <span class="info-ocatart">&ensp;<i class="ocatart-icons info"></i>&ensp;Para enviarte tu pedido por favor agrega una dirección a la que quieres recibir el paquete.</span>
+          <form class="form-direccion" action="#" method="post">
+            <div class="input-field col s12 input-Default">
+              <input id="direccion" name="direccion" class="input-ocatart" type="text">
+              <label for="direccion">Dirección</label>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 input-Default margin-column">
+                <input id="direccion2" name="direccion2" class="input-ocatart" type="text">
+                <label for="direccion2" class="input-label">Adicional (Piso, edificio, referencias etc.)</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6 input-Default margin-column">
+                <select id="pais" name="pais">
+                  <option value="1" disabled selected>País</option>
+                  <option value="2">México</option>
+                  <option value="3">Ecuador</option>
+                  <option value="4">Chile</option>
+                  <option value="5">Perú</option>
+                </select>
+              </div>
+              <div class="input-field col s6 input-Default margin-column">
+                <input id="estado" name="estado" class="input-ocatart" type="text">
+                <label for="estado" class="input-label">Estado/Provincia/Región</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6 input-Default margin-column">
+                <input id="ciudad" name="ciudad" class="input-ocatart" type="text">
+                <label for="ciudad" class="input-label">Ciudad</label>
+              </div>
+              <div class="input-field col s6 input-Default margin-column">
+                <input id="codigo_postal" name="codigo_postal" class="input-ocatart" type="text">
+                <label for="codigo_postal" class="input-label">Código Postal</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6 input-Default margin-column">
+                <input id="telefono" name="telefono" class="input-ocatart" type="text">
+                <label for="telefono" class="input-label">Número de teléfono</label>
+              </div>
+              <div class="input-field col s6 input-Default margin-column">
+                <input id="celular" name="celular" class="input-ocatart" type="text">
+                <label for="celular" class="input-label">Número de celular</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 input-Default margin-column">
+                <select id="metodo_pago" name="metodo_pago">
+                  <option value="1" disabled selected>Metodo de pago</option>
+                  <option value="2">Paypal (Internacional)</option>
+                  <option value="3">Oxxo (Solo México)</option>
+                  <option value="4">Deposito Bancario (Solo México)</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 input-Default margin-column">
+                <textarea id="info_adicional" name="info_adicional" class="materialize-textarea input-ocatart" data-length="800"></textarea>
+                <label for="info_adicional" class="input-label">¿Algo adicional que hayas olvidado comentar sobre tu pedido?</label>
+              </div>
+            </div>
+            <div class="row">
+              <p>
+                <input type="checkbox" class="filled-in" id="seguro" name="seguro" />
+                <label for="seguro">Seguro del paquete (Adicional: $100 MXN a tu pedido)</label>
+              </p>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <ul>
+                  <li class="left">
+                    <a class="waves-effect waves-light btn-ocatart-link form-trigger active" href="#info-garantia">Cancelar Pedido</a>
+                  </li>
+                  <li class="right">
+                    <button type="submit" class="waves-effect waves-light btn btn-ocatart-fat">Confirmar</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+
+
+  <!-- Contacto -->
+  <section class="contact-section bg-black" id="contacto-div">
+    <div class="container">
+
+
+      <div class="social d-flex justify-content-center">
+        <a href="#" class="mx-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="mx-2">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-black small center text-white-50">
+    <div class="container">
+      Copyright &copy; @ocatart 2018
+    </div>
+  </footer>
+  <!-- Core Javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/js/materialize.min.js"></script>
+  <script src="../js/initcotizaciones.js"></script>
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+  <script src='../js/ScrollMagic.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.1/plugins/animation.gsap.js'></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js" integrity="sha256-t5ZQTZsbQi8NxszC10CseKjJ5QeMw5NINtOXQrESGSU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+  <!-- Custom scripts -->
+</body>
+
+</html>
